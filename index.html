@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced HTML5 Elements and Forms</title>
+</head>
+
+<body>
+    <header>
+        <h1>Advanced HTML5 Elements and Forms</h1>
+        <nav>
+            <ul>
+                <li><a href="#ordered-list">Ordered List</a></li>
+                <li><a href="#image-section">Image</a></li>
+                <li><a href="#contact-table">Contact Table</a></li>
+                <li><a href="#registration-form">Registration Form</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Ordered List with Roman Numerals -->
+        <section id="ordered-list">
+            <h2>Web Development Learning Path</h2>
+            <p>Follow these steps to become a web developer:</p>
+            <ol type="I">
+                <li>Learn HTML5 Basics
+                    <ul>
+                        <li>Document structure</li>
+                        <li>Semantic elements</li>
+                        <li>Text formatting</li>
+                    </ul>
+                </li>
+                <li>Master CSS
+                    <ul>
+                        <li>Selectors and properties</li>
+                        <li>Layouts and responsiveness</li>
+                        <li>Animations</li>
+                    </ul>
+                </li>
+                <li>Study JavaScript
+                    <ul>
+                        <li>Basic syntax</li>
+                        <li>DOM manipulation</li>
+                        <li>Event handling</li>
+                    </ul>
+                </li>
+                <li>Learn Frameworks
+                    <ul>
+                        <li>React, Angular, or Vue</li>
+                        <li>Bootstrap or Tailwind</li>
+                    </ul>
+                </li>
+                <li>Build Projects
+                    <ul>
+                        <li>Personal portfolio</li>
+                        <li>Interactive websites</li>
+                        <li>Web applications</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+
+        <!-- External Image from Pexels -->
+        <section id="image-section">
+            <h2>Web Development Workspace</h2>
+            <figure>
+                <img src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg"
+                    alt="Laptop with code on screen on a desk with coffee" width="600">
+                <figcaption>A modern web developer's workspace with code editor open</figcaption>
+            </figure>
+        </section>
+
+        <!-- Table of Contacts -->
+        <section id="contact-table">
+            <h2>Contact Directory</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Mobile</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John Smith</td>
+                        <td>123 Main St, New York, NY</td>
+                        <td>(555) 123-4567</td>
+                        <td>john.smith@example.com</td>
+                    </tr>
+                    <tr>
+                        <td>Jane Doe</td>
+                        <td>456 Park Ave, Boston, MA</td>
+                        <td>(555) 234-5678</td>
+                        <td>jane.doe@example.com</td>
+                    </tr>
+                    <tr>
+                        <td>Michael Johnson</td>
+                        <td>789 Oak Dr, San Francisco, CA</td>
+                        <td>(555) 345-6789</td>
+                        <td>michael.j@example.com</td>
+                    </tr>
+                    <tr>
+                        <td>Sarah Williams</td>
+                        <td>101 Pine St, Seattle, WA</td>
+                        <td>(555) 456-7890</td>
+                        <td>sarah.w@example.com</td>
+                    </tr>
+                    <tr>
+                        <td>Robert Brown</td>
+                        <td>202 Maple Rd, Austin, TX</td>
+                        <td>(555) 567-8901</td>
+                        <td>robert.b@example.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Registration Form -->
+        <section id="registration-form">
+            <h2>User Registration</h2>
+            <form action="/register" method="post">
+                <!-- Personal Information Fieldset -->
+                <fieldset>
+                    <legend>Personal Information</legend>
+
+                    <!-- Name Field -->
+                    <div>
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required
+                            minlength="2" maxlength="50">
+                    </div>
+
+                    <!-- Email Field -->
+                    <div>
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+                    </div>
+
+                    <!-- Password Field -->
+                    <div>
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" placeholder="Create a strong password"
+                            required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                            title="Must contain at least one number, one uppercase and lowercase letter, and at least 8 characters">
+                    </div>
+
+                    <!-- Date of Birth Field -->
+                    <div>
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                </fieldset>
+
+                <!-- Preferences Fieldset -->
+                <fieldset>
+                    <legend>Preferences</legend>
+
+                    <!-- Dropdown Menu -->
+                    <div>
+                        <label for="occupation">Occupation:</label>
+                        <select id="occupation" name="occupation" required>
+                            <option value="">--Please select--</option>
+                            <option value="student">Student</option>
+                            <option value="professional">Professional</option>
+                            <option value="self-employed">Self-employed</option>
+                            <option value="unemployed">Unemployed</option>
+                            <option value="retired">Retired</option>
+                        </select>
+                    </div>
+
+                    <!-- Radio Buttons -->
+                    <div>
+                        <p>How did you hear about us?</p>
+                        <input type="radio" id="social" name="referral" value="social">
+                        <label for="social">Social Media</label><br>
+
+                        <input type="radio" id="friend" name="referral" value="friend">
+                        <label for="friend">Friend/Family</label><br>
+
+                        <input type="radio" id="search" name="referral" value="search">
+                        <label for="search">Search Engine</label><br>
+
+                        <input type="radio" id="other" name="referral" value="other">
+                        <label for="other">Other</label>
+                    </div>
+
+                    <!-- Checkboxes -->
+                    <div>
+                        <p>Topics you're interested in:</p>
+                        <input type="checkbox" id="html" name="interests" value="html">
+                        <label for="html">HTML & CSS</label><br>
+
+                        <input type="checkbox" id="js" name="interests" value="js">
+                        <label for="js">JavaScript</label><br>
+
+                        <input type="checkbox" id="databases" name="interests" value="databases">
+                        <label for="databases">Databases</label><br>
+
+                        <input type="checkbox" id="backend" name="interests" value="backend">
+                        <label for="backend">Backend Development</label>
+                    </div>
+                </fieldset>
+
+                <!-- Additional Information Fieldset -->
+                <fieldset>
+                    <legend>Additional Information</legend>
+
+                    <!-- Text Area -->
+                    <div>
+                        <label for="bio">Short Bio:</label><br>
+                        <textarea id="bio" name="bio" rows="4" cols="50"
+                            placeholder="Tell us a little about yourself..."></textarea>
+                    </div>
+
+                    <!-- File Upload -->
+                    <div>
+                        <label for="profile-pic">Profile Picture:</label>
+                        <input type="file" id="profile-pic" name="profile-pic" accept="image/*">
+                    </div>
+                </fieldset>
+
+                <!-- Form Submission -->
+                <div>
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree to the terms and conditions</label>
+                </div>
+
+                <div>
+                    <button type="submit">Register</button>
+                    <button type="reset">Clear Form</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Audio and Video Section -->
+        <section id="multimedia">
+            <h2>Multimedia Examples</h2>
+
+            <!-- Audio Element -->
+            <div>
+                <h3>Audio Sample</h3>
+                <audio controls>
+                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <!-- Video Element -->
+            <div>
+                <h3>Video Sample</h3>
+                <video width="400" controls>
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Advanced HTML5 Demo. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
